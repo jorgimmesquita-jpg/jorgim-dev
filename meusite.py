@@ -5,7 +5,7 @@ st.title("🚀 Central de Cálculos do Jorge")
 
 # Menu de escolha
 opcao = st.selectbox("O que você quer calcular?", 
-                     ["Desconto de 5%", "Média de Aluno", "Conversor de Temperatura" ,"dobro triplo raiz"])
+                     ["Desconto de 5%", "Média de Aluno", "Conversor de Temperatura" ,"dobro triplo raiz" , "Somar" ,"subtracao" , 'numero multiplos '])
 
 if opcao == "Desconto de 5%":
     preco = st.number_input("Digite o preço do produto (R$):", min_value=0.0)
@@ -39,4 +39,17 @@ elif opcao == "dobro triplo raiz":
        st.write(f"o dobro de {n} e {d}")
        st.write(f"o triplo de {n} e {t}")  
        st.write(f"a raiz quadrada e {r:.2f}")   
-    
+elif opcao == "Somar":
+    n1 =st.number_input("digite um numero:")
+    n2 = st.number_input("digite o segundo numero:")
+    if st.button ("somar agora!"):
+        resultado = n1 + n2 
+        st.success (f"a soma dos de {n1} + {n2} e igual a {resultado}")
+elif opcao == "subtracao":
+    n1 = st.number_input('digite um numero:')
+    n2 = st.number_input('digite o segundo numero')
+    if st.button ('subtracao!'):
+        resultado = n1 -n2
+        st.success(f'a subtracao de {n1} - {n2} e igual a {resultado}')
+
+
